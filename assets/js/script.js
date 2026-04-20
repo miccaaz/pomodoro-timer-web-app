@@ -13,7 +13,6 @@ const playPauseIcon = document.querySelector('.app__card-primary-butto-icon')
 const tempoNaTela = document.querySelector('#timer')
 
 const musicaFocoImput = document.querySelector('#alternar-musica')
-const musica = new Audio('/assets/sounds/luna-rise-part-one.mp3')
 const playSom = new Audio('/assets/sounds/play.wav')
 const pauseSom = new Audio('/assets/sounds/pause.mp3')
 const alertaSom = new Audio('/assets/sounds/beep.mp3')
@@ -21,15 +20,6 @@ const alertaSom = new Audio('/assets/sounds/beep.mp3')
 let tempoDecorridoEmSegundos = 1500
 let intervaloId = null
 
-musica.loop = true
-
-musicaFocoImput.addEventListener('change', () => {
-    if(musica.paused) {
-        musica.play()
-    } else {
-        musica.pause()
-    }
-})
 
 focoBt.addEventListener('click', () => {
     tempoDecorridoEmSegundos = 1500
